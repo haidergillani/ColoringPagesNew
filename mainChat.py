@@ -14,7 +14,7 @@ import zipfile
 import os
 
 # Set OpenAI API key using Streamlit Secrets
-openai.api_key = 'abc'
+openai.api_key = 'key'
 
 # Initialize session state to store previously generated images
 if 'images' not in st.session_state:
