@@ -13,8 +13,13 @@ from io import BytesIO
 import zipfile
 import os
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
 # Set OpenAI API key using Streamlit Secrets
-openai.api_key = 'key'
+openai.api_key = os.getenv('OPEN_AI_API_KEY')
 
 # Initialize session state to store previously generated images
 if 'images' not in st.session_state:
